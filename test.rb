@@ -75,12 +75,24 @@ def findMax(my_array)
 		for i in 0..max_len
 				if my_array[i] > mxm
 				mxm = my_array[i]
-				else
-				mxm
 				end
 		end
 	mxm
 end
+
+# Zachs solution
+def find_max(some_array)
+	max_num = some_array[0]
+	some_array.each do |number|
+		if number > max_num
+			max_num = number
+		end
+	end
+	max_num
+end
+
+
+
 
 q7 = findMax(my_array2)
 puts q7
@@ -96,6 +108,24 @@ end
 
 q8 = zipArrays(array3,array4)
 puts q8
+
+
+# How do you iterate over an array?
+# 	each.do
+# use external counter to tell what iteration in the loop
+
+#Zachs Solution
+def buildHash(keys,values)
+	crazy = {}
+	counter = 0
+	keys.each do |key|
+		crazy[key] = values[counter]
+		counter += 1
+	end
+	crazy
+end
+
+
 
 def fizzBuzz(range = 100)
 	for i in 1..range
